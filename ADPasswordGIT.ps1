@@ -60,7 +60,7 @@ $AdExport = "C:\Temp\AD_Updated $TimeExe.csv"  #Change the temp directory if wan
 
 Write-Host "Connected with success" 
 
-Get-PnPFile "Sharepoint path of .csv input file here" -Path "C:\Temp" -FileName "name of the file .csv" -AsFile -Force   #Testar com a planilha aberta pra ver se vai modificar os valores.
+Get-PnPFile "Sharepoint path of .csv input file here" -Path "C:\Temp" -FileName "name of the file .csv" -AsFile -Force   
 
 
 #ForEach row in the download user files, finds and selects its properties.
