@@ -1,6 +1,36 @@
-﻿#ColectAD-Properties and Export to Sharepoint Online - Made by Luiz Sennos
-#Version 1.8 
-#New features - Checks if required modules exists / Keep the PS window opened / Pause at the end
+<#
+.SYNOPSIS
+This PowerShell script updates Active Directory user passwords and exports user properties to Excel, then uploads the Excel file to SharePoint.
+
+.DESCRIPTION
+This script performs the following tasks:
+1. Checks for the existence of required PowerShell modules and installs them if necessary.
+2. Collects user properties from an input CSV file and exports them to a local CSV file.
+3. Connects to SharePoint Online, downloads a CSV file from SharePoint, and extracts user properties from it.
+4. Creates an Excel table with the extracted user properties, calculates remaining days for password expiration, and saves the Excel file locally.
+5. Uploads the Excel file to a specified location in SharePoint.
+6. Removes temporary files created during the script execution.
+
+.PARAMETER None
+This script does not require any parameters to be passed.
+
+.EXAMPLE
+.\Update-ADUserPassword.ps1
+Runs the script with default settings.
+
+.NOTES
+- This script requires SharePointPnPPowerShellOnline, ActiveDirectory, and ImportExcel modules to be installed.
+- SharePoint Online credentials and SharePoint site URL need to be provided.
+- Input CSV file with user properties should be available in SharePoint.
+- Temporary files are stored in C:\Temp directory and are removed at the end of the script execution.
+- This script should be run with appropriate permissions to update Active Directory user passwords and access SharePoint.
+
+.AUTHOR
+Luiz Sennos
+The author of this script.
+
+#>
+
 
 Write-Host "Transaction started" -BackgroundColor Green  -ForegroundColor Black
 
