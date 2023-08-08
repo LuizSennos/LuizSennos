@@ -1,5 +1,5 @@
 <#
-Script: YourScriptName.ps1
+Script: Check_VM.ps1
 Creator: Luiz Sennos
 Date: July 03, 2022
 Description: This script performs the following tasks:
