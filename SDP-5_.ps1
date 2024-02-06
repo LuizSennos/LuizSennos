@@ -1,4 +1,4 @@
-﻿function Select-TextItem 
+function Select-TextItem 
 { 
     PARAM  
     ( 
